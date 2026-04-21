@@ -43,3 +43,7 @@ next-env.d.ts
 #Agent
 AGENTS.md
 CLAUDE.md
+
+#repomix
+frontend-repomix.md
+backend-repomix.md
