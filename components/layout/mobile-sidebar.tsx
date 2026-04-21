@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { Menu, ChartNoAxesCombined } from "lucide-react";
 import { usePathname } from "next/navigation";
@@ -18,9 +19,10 @@ import {
 
 export function MobileSidebar() {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
 
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <Button
           variant="outline"
@@ -35,7 +37,11 @@ export function MobileSidebar() {
       <SheetContent side="left" className="w-[290px] p-0">
         <SheetHeader className="border-b border-border/70 px-4 py-4">
           <SheetTitle asChild>
-            <Link href={routes.home} className="flex items-center gap-3">
+            <Link
+              href={routes.home}
+              className="flex items-center gap-3"
+              onClick={() => setOpen(false)}
+            >
               <div className="flex size-10 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-lg shadow-primary/20">
                 <ChartNoAxesCombined className="size-5" />
               </div>
@@ -57,6 +63,7 @@ export function MobileSidebar() {
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={() => setOpen(false)}
                 className={cn(
                   "cursor-pointer flex items-center gap-3 rounded-[1rem] px-3 py-3 text-sm font-medium transition-all duration-200",
                   isActive
