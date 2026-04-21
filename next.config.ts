@@ -25,7 +25,7 @@ const securityHeaders = [
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob:",
       "font-src 'self' data:",
-      "connect-src 'self' http://127.0.0.1:8000 http://localhost:8000",
+      "connect-src 'self' http://127.0.0.1:8000 http://localhost:8000 https://metricmint-backend-production.up.railway.app",
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self'",
