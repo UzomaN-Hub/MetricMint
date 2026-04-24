@@ -367,51 +367,6 @@ python run.py
 pytest
 ```
 
-## Performance considerations
-
-The project is structured to support a dense but responsive interface.
-
-Current and planned performance ideas include:
-
-- caching server results with TanStack Query
-- memoizing table and filter logic where needed
-- keeping route surfaces focused instead of overcrowded
-- leaving room for virtualization on larger tables
-- avoiding heavy backend processing for the MVP
-- preserving visual stability with loading skeletons
-
-## UX principles followed
-
-- signal before detail
-- filters must feel safe
-- drill-down must be reversible
-- comparisons should be intuitive
-- tables should remain tools, not clutter
-- empty / loading / error states are part of the core experience
-
-## Security notes
-
-MetricMint is not built as a high-risk public financial platform, but it still benefits from basic application hardening:
-
-- restrictive CORS on the backend
-- no real secrets committed to source control
-- secure default response headers in Next.js
-- no sensitive tokens exposed through public environment variables
-- server-side validation for filter and query parameters
-
-## Current status
-
-MetricMint includes the major dashboard surfaces, shared layout system, seeded backend API, report table workflow, saved-view UI, and responsive product shell. It is positioned as a polished analytics application rather than a single-screen demo.
-
-## Suggested next improvements
-
-- finish chart sizing cleanup on route transitions
-- connect more cards to live backend data
-- add stronger table virtualization for larger datasets
-- expand saved-view persistence behavior
-- add share workflow and richer export behavior
-- tighten responsive behavior on every surface
-- capture screenshots / demo assets
 
 ## License
 
