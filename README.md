@@ -370,4 +370,4 @@ pytest
 
 ## License
 
-Built by Uzoma Nwaiwu
+Built by Uzoma Nwaiwu.
